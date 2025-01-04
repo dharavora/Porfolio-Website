@@ -14,20 +14,18 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    /* background-image: url(https://www.shutterstock.com/image-photo/portrait-asian-business-woman-dark-260nw-1495288892.jpg); */
     background-image: url(https://img.freepik.com/premium-photo/handsome-business-woman-isolated-black-with-arms-crossed-black-background_493343-13537.jpg);
     background-size: cover;
     /* background-position: center; */
 }
 .container {
-    padding: 10px 10%;
+    padding: 10px 8%;
 }
 nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .logo {
     font-size: 50px;
@@ -70,7 +68,7 @@ nav ul li a:hover::after {
     color: #ff004f;
 }
 
-/* ==================About==================== */
+/* ================== About ==================== */
 
 #about {
     padding: 80px 0px;
@@ -138,7 +136,7 @@ nav ul li a:hover::after {
     display: block;
 }
 
-/* =================Services=============== */
+/* ================= Services =============== */
 
 #services {
     padding: 30px 0;
@@ -153,11 +151,11 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 .services-list div {
-    width: 330px;
-    height: 330px;
+    width: 360px;
+    height: 350px;
     background-color: #262626;
     padding: 40px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 300;
     border-radius: 10px;
     transition: 0.5s;
@@ -174,7 +172,7 @@ nav ul li a:hover::after {
 .services-list div a {
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 20px;
     display: inline-block;
 }
@@ -198,13 +196,13 @@ nav ul li a:hover::after {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    width: 320px;
+    /* width: 320px; */
 }
 .work img {
     /* width: 100%; */
     border-radius: 10px;
     display: block;
-    width: 320px;
+    width: 350px;
     height: 400px;
     transition: 0.5s;
 }
@@ -223,10 +221,10 @@ nav ul li a:hover::after {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     transition: 0.5s;
 }
-.layer h3 {
+.layer h2 {
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -248,12 +246,14 @@ nav ul li a:hover::after {
 .work:hover .layer {
     height: 100%;
 }
-.btn {
-    display: block;
+#portfolio .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    width: 170px;
     margin: 50px auto;
-    width: fit-content;
     border: 1px solid #ff004f;
-    padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
@@ -294,9 +294,18 @@ nav ul li a:hover::after {
     color: #ff004f;
     transform: translateY(-5px);
 }
-.btn.btn2 {
-    display: inline-block;
+.contact-left .btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    height: 52px;
+    width: 170px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
     background-color: #ff004f;
+    text-decoration: none;
 }
 .contact-right form {
     width: 100%;
@@ -312,11 +321,15 @@ form input, form textarea {
     font-size: 18px;
     border-radius: 6px;
 }
-form .btn2 {
-    padding: 14px 60px;
+.contact-right .btn2 {
+    display: inline-block;
+    height: 52px;
+    width: 170px;
     font-size: 18px;
-    margin-top: 20px;
     cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
     background-color: #ff004f;
 }
 .copyright {
@@ -332,6 +345,59 @@ form .btn2 {
 }
 nav .fa-solid {
     display: none;
+}
+
+
+@media (min-width:360px) {
+    .header-text {
+        margin-top: 70%;
+    }
+    .about-col-1 img {
+        height: 400px;
+    }
+    #about {
+        padding: 40px 0px;
+    }
+    .services-list div {
+        font-size: 13px;
+    }
+    #portfolio {
+        padding: 30px 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .services-list div {
+        width: 450px;
+    }
+    .work img {
+        width: 450px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background-color: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -393,5 +459,108 @@ nav .fa-solid {
     }
     .copyright {
         font-size: 14px;
+    }
+}
+
+@media (min-width:768px) {
+    .header-text {
+        margin-top: 40%;
+        font-size: 20px;
+    }
+    .header-text h1 {
+        font-size: 40px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background-color: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .services-list div {
+        width: 600px;
+    }
+    .work img {
+        width: 600px;
+    }
+    .contact-left h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media (min-width:992px) {
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    .about-col-1 img {
+        width: 100%;
+        height: 500px;
+    }
+    .header-text {
+        margin-top: 20%;
+    }
+    .services-list div {
+        width: 370px;
+        height: 350px;
+    }
+    .work img {
+        width: 360px;
+        height: 400px;
+    }
+    #sidemenu{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        height: fit-content;
+        width: fit-content;
+        padding-top: 0;
+    }
+    nav .fa-solid{
+    display: none;
+    }
+}
+
+
+@media (min-width:1100px) {
+    .header-text {
+        margin-top: 20%;
+    }
+    .header-text p {
+        font-size: 25px;
+    }
+    .header-text h1 {
+        font-size: 60px;
+    }
+    nav ul li {
+        display: block;
+    }
+    .services-list div {
+        width: 360px;
+        height: 350px;
+    }
+    .work img {
+        width: 350px;
+        height: 400px;
     }
 }
